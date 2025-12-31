@@ -26,7 +26,7 @@ COPY ./shuffle.py /opt/Cortex-Analyzers/responders/Shuffle/shuffle.py
 # Grant execute permission to the shuffle.py script
 RUN chmod +x /opt/Cortex-Analyzers/responders/Shuffle/shuffle.py
 # Install dependencies
-RUN pip install -r /opt/Cortex-Analyzers/analyzers/MISP/requirements.txt
+RUN pip install --break-system-packages -r /opt/Cortex-Analyzers/analyzers/MISP/requirements.txt
 ## HERE ADD ALL THE OTHER ANALYZERS WE WANT TO USE
 # Install Python 2 dependencies for Cortex-Analyzers
 #RUN for I in $(find Cortex-Analyzers -name 'requirements.txt'); do \
