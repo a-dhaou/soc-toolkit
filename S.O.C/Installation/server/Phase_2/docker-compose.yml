@@ -47,12 +47,12 @@ services:
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
       - MISP_ADMIN_EMAIL=${MISP_ADMIN_EMAIL}
       - MISP_ADMIN_PASSPHRASE=${MISP_ADMIN_PASSPHRASE}
-      - MISP_BASEURL=${MISP_BASEURL}
+      - MISP_BASEURL=https://localhost
       - TIMEZONE=Europe/London
       - "INIT=true"
       - "CRON_USER_ID=1"
       - "REDIS_FQDN=redis"
-      - "HOSTNAME=https://0.0.0.0"
+      - "HOSTNAME=https://localhost"
 
 
   misp_mysql:
@@ -92,5 +92,4 @@ services:
 volumes:
   mispsqldata:
   redis:
-
 
